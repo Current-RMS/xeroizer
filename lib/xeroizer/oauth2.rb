@@ -10,7 +10,7 @@ module Xeroizer
     end
 
     def authorize_from_access(access_token, options = {})
-      @access_token = ::OAuth2::AccessToken.new(client, access_token)
+      @access_token = ::OAuth2::AccessToken.new(client, access_token, options)
     end
 
     def get(path, headers = {})
